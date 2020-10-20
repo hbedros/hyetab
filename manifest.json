@@ -1,5 +1,12 @@
 {
+    "manifest_version": 2,
     "name": "Hye Tab",
-    "version": "0.1",
-    "manifest_version": 2
+    "description": "Tab to donate to armenia",
+    "version": "1.0.0",
+    "icons": {"128": "icon.png"},
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "permission": ["activTab"]
   }
