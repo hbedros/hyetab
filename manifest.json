@@ -3,11 +3,24 @@
     "name": "Hye Tab",
     "description": "Tab to donate to armenia",
     "version": "1.0.0",
-    "icons": {"128": "icon.png"},
-    "browser_action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
+    "author": "hbe",
+    "permissions": [
+      "https://cdn.jsdeliver.net/npm/vue/dist/vue.js"
+  ],
+  "background": {
+      "scripts": ["popup.js"],
+      "persistent": false,
+
+    "chrome_url_overrides": {
+      "newtab": "new_tab.html"
     },
-    "permission": ["activTab"],
-    "permission_2": []
+    "icons": {
+      "16": "icons/200.png",
+      "32": "icons/200.png",
+      "128": "icons/200.png"
+    },
+
+  "permissions": ["https://source.unsplash.com/"], 
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'"
   }
+}
