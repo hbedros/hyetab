@@ -13,6 +13,7 @@
     "128": "icons/32.png"
   },
   "permissions": [
+    "bookmarks",
     "https://source.unsplash.com/"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'"

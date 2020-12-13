@@ -1,16 +1,21 @@
-import logo from './logo.png'
-import './App.css'
+import React from 'react'
+import { AppBackgroundImage } from './components/app_beckground'
+import { DateTime } from "./components/date_component"
+import { SearchInput } from "./components/search"
+import styled from 'styled-components'
+
+const AppStyled = styled.div`
+  position: relative
+`
 
 function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <p>
-          HayTab
-        </p>
-      </header>
-    </div>
+    <AppBackgroundImage>
+      <AppStyled>
+        <SearchInput/>
+        <DateTime/>
+      </AppStyled>
+    </AppBackgroundImage>
   )
 }
 
