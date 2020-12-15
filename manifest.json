@@ -1,18 +1,20 @@
 {
-    "manifest_version": 2,
-    "name": "HyeTab",
-    "description": "Tab to donate to armenia",
-    "version": "1.0.0",
-    "author": "hbe",
-    "chrome_url_overrides": {
-      "newtab":"new_tab.html"
-    },
-    "icons": {                   
-      "16": "icons/32.png",
-      "32": "icons/32.png",
-      "128": "icons/32.png"  
-    },
-
-  "permissions": ["https://source.unsplash.com/"], 
+  "manifest_version": 2,
+  "name": "HyeTab",
+  "description": "Tab to donate to armenia",
+  "version": "1.0.0",
+  "author": "hbe",
+  "chrome_url_overrides": {
+    "newtab": "new_tab.html"
+  },
+  "icons": {
+    "16": "icons/32.png",
+    "32": "icons/32.png",
+    "128": "icons/32.png"
+  },
+  "permissions": [
+    "bookmarks",
+    "https://source.unsplash.com/"
+  ],
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'"
 }

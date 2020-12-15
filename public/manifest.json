@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "HyeTab",
+  "description": "Tab to donate to armenia",
+  "version": "1.0.0",
+  "author": "hbe",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions" : ["management", "history", "storage"],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"}
