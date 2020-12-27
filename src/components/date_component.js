@@ -1,6 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
+export const DateTime = () => {
+  const [date, setDate] = useState(new Date())
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDate(new Date())
+    }, 1000)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
+
+  const min = date.getMinutes()
+
+  return (
+    <DateCpWrapper>
+      <DateCp>
+        <div>
+          <DateWrapper>
+            {date.getHours()} : {min > 9 ? min : `0${min}`}
+          </DateWrapper>
+        </div>
+        <div>
+          <SpanWrapper>
+            {getWeekDay(date.getDay())}, {getMonthName(date.getMonth())} {date.getDate()}
+          </SpanWrapper>
+        </div>
+      </DateCp>
+    </DateCpWrapper>
+  )
+}
+
+
 const SpanWrapper = styled.span`
   color: white;
   font-weight: bold;
@@ -46,36 +79,4 @@ const getMonthName = (monthNumber) => {
   ]
 
   return months[monthNumber - 1]
-}
-
-export const DateTime = () => {
-  const [date, setDate] = useState(new Date())
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDate(new Date())
-    }, 1000)
-
-    return () => {
-      clearInterval(interval)
-    }
-  }, [])
-
-  const min = date.getMinutes()
-
-  return (
-    <DateCpWrapper>
-      <DateCp>
-        <div>
-          <DateWrapper>
-            {date.getHours()} : {min > 9 ? min : `0${min}`}
-          </DateWrapper>
-        </div>
-        <div>
-          <SpanWrapper>
-            {getWeekDay(date.getDay())}, {getMonthName(date.getMonth())} {date.getDate()}
-          </SpanWrapper>
-        </div>
-      </DateCp>
-    </DateCpWrapper>
-  )
 }

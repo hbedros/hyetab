@@ -2,8 +2,16 @@ import React, { useState, useRef } from "react"
 import styled from "styled-components"
 import searchIcon from '../assets/search.svg'
 
-const Form = styled.form`
+
+const SearchWrapper = styled.div`
+  left: 15%;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,12 +67,13 @@ export const SearchInput = () => {
 
   const onFormSubmit = e => {
     e.preventDefault()
+    window.location.replace(`https://www.google.com/search?q=${input}`);
     setInput("")
     setBarOpened(false)
   }
 
   return (
-    <div className="App">
+    <SearchWrapper>
       <Form
         barOpened={barOpened}
         onClick={() => {
@@ -92,6 +101,6 @@ export const SearchInput = () => {
           <img src={searchIcon} alt='search input'/>
         </Button>
       </Form>
-    </div>
+    </SearchWrapper>
   )
 }
