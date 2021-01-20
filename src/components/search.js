@@ -4,7 +4,7 @@ import searchIcon from '../assets/search.svg'
 
 
 const SearchWrapper = styled.div`
-  left: 15%;
+  left: 7%;
   position: absolute;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@ const Form = styled.form`
   width: ${props => (props.barOpened ? "16.25rem" : "2rem")};
   cursor: ${props => (props.barOpened ? "auto" : "pointer")};
   padding-top: 25px;
-  margin-left: 30px;
+  margin-left: 15px;
   height: 36px;
   transition: width 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 `
